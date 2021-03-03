@@ -34,10 +34,8 @@ Enter <code>tipue</code> or <code>blog</code>.
 </div>
 
 <div style="padding-top: 36px;">
-<form>
-<div class="tipue_search_group">
-<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" action="search.html" method="get" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
-</div>
+<form id="searchform" action="/search" onsubmit="return (this.elements['q'].value.length > 0)">
+    <input id="searchbox" type="text" name="q" size="12" placeholder="Search">
 </form>
 
 <div id="tipue_search_content"></div>
