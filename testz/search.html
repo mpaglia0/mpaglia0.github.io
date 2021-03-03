@@ -9,20 +9,16 @@
 
 <link href="https://fonts.googleapis.com/css?family=Squada+One|Source+Code+Pro|Merriweather:300|Abril+Fatface" rel="stylesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
 <link rel="stylesheet" href="../inc/standard.css">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-<script src="https://web.archive.org/web/20191026104834js_/https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script src="/web/20191026104834js_/http://www.tipue.com/search/tipuesearch/tipuesearch_content.js"></script>
-<link rel="stylesheet" href="/web/20191026104834cs_/http://www.tipue.com/search/tipuesearch/css/tipuesearch.css">
-<script src="/web/20191026104834js_/http://www.tipue.com/search/tipuesearch/tipuesearch_set.js"></script>
-<script src="/web/20191026104834js_/http://www.tipue.com/search/tipuesearch/tipuesearch.min.js"></script>
-<script>
-$(document).ready(function() {
-     $('#tipue_search_input').tipuesearch();
-});
-</script>
 </head><body>
 
 <div class="cont">
@@ -38,7 +34,17 @@ $(document).ready(function() {
 
 <div class="block-978" style="padding-bottom: 59px;">
 
+<div style="padding-top: 10px;"><h2>A demo</h2></div>
+<div class="fo-3" style="padding-top: 17px;">
+Enter <code>tipue</code> or <code>blog</code>.
+</div>
+
 <div style="padding-top: 36px;">
+<form>
+<div class="tipue_search_group">
+<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+</div>
+</form>
 
 <div id="tipue_search_content"></div>
 </div>
@@ -47,11 +53,14 @@ $(document).ready(function() {
 </div>
 
 </div>
-     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-     
+
 <footer class="foot"><div class="block fo-1"><a href="http://www.tipue.com">Tipue</a> is a small web development studio based in North London.<p>&copy; 2019 Tipue. Est London.</div></footer>
+
+<script>
+$(document).ready(function() {
+     $('#tipue_search_input').tipuesearch();
+});
+</script>
 
 </body>
 </html>
